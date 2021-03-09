@@ -1,0 +1,25 @@
+<mat-toolbar  class="mat-elevation-z6" color="primary">
+  <button mat-icon-button (click)="opened = !opened">
+    <mat-icon>menu</mat-icon>
+    </button> Angular Material 2 App
+</mat-toolbar>
+<mat-sidenav-container class="main-sidenav-container" (backdropClick)="opened = !opened">
+<mat-sidenav [mode]="mode"
+            [opened]="opened"
+            [fixedInViewport]="true"
+            [fixedTopGap]="layoutGap">
+            <button mat-button (click)="opened = !opened">
+              Hello from Sidenav-Content
+            </button>
+  </mat-sidenav>
+  <div>scroll below</div>
+  <div class="div-scrollable">I contain the main content and I am scrollable</div>
+  <div>some more content</div>
+</mat-sidenav-container>
+
+<!--
+Copyright Google LLC All Rights Reserved.
+
+Use of this source code is governed by an MIT-style license that can be
+found in the LICENSE file at https://angular.io/license
+-->
